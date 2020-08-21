@@ -1,0 +1,16 @@
+{% extends "blog/base.html"%}
+{% block content%}
+    <form action="" method="POST">
+        {%  csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4 pb-2">Join Today</legend>
+            {{form.as_p}}
+        </fieldset>
+        <button type="submit" class="btn btn-outline-info px-4">join</button>
+    </form>
+    <div class="border-top pt-3 mt-3">
+        <small class="text-muted">
+            Already Have An Account? <a href="#" class="ml-3">Sign In</a>
+        </small>
+    </div>
+{% endblock content%}
