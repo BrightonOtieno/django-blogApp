@@ -6,16 +6,23 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated%}
+            <li class="nav-item">
+                <a class="nav-link " href="{% url 'logout-page'%}" tabindex="-1" aria-disabled="true">logout</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="{% url 'user-profile'%}" tabindex="-1" aria-disabled="true">profile</a>
+            </li>
+        {%else%}
             <li class="nav-item active">
-            <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'login-page'%}">Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="{% url 'registration-page'%}">Register</a>
             </li>
             
-            <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">logout</a>
-            </li>
+        {%endif%}
         </ul>
 
         </div>

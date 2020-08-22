@@ -28,9 +28,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +124,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#CRISPY_ALLOWED_TEMPLATE_PACKS = ('bootstrap4', 'uni_form', 'bootstrap3', 'foundation-5')
+LOGIN_REDIRECT_URL = 'blog-home'
+
+LOGIN_URL = 'login-page'
+
+
+
