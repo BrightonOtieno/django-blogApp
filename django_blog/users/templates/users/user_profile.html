@@ -1,5 +1,17 @@
 {% extends "blog/base.html"%}
 
 {%block content%}
-    {{user.username}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="prof-pic-container" >
+                    <img src="{{user.profile.image.url}}" alt="profile-picture" class="" style="width:75px;height: 75px; border: 1px solid #eee; border-radius: 50%;object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h4>{{user.username}}</h4>
+                <p><small>{{user.email}}</small></p>
+            </div>
+        </div>
+    </div>
 {%endblock content%}
