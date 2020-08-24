@@ -9,7 +9,7 @@ def create_profile(sender,instance,created,**kwargs):
     user = instance
     if created:
         profile =Profile.objects.create(user=user)
-        profile.save()
+        #profile.save()
 
 
 
